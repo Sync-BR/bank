@@ -1,20 +1,45 @@
 package com.bank.banco.virtual.model;
 
 import com.bank.banco.virtual.enums.SexEnum;
+import jakarta.persistence.*;
 
+@Entity(name = "ClienteModel")
+@Table(name = "cliente", schema = "bank")
 public class ClienteModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "cliente_name", nullable = false )
     private String name;
+    @Column(name = "cliente_cpf", nullable = false )
     private String cpf;
+    @Column(name = "cliente_age", nullable = false )
     private int age;
+    @Column(name = "cliente_email", nullable = false )
     private String email;
+    @Column(name = "cliente_telephone", nullable = false )
     private String telephone;
+    @Column(name = "cliente_cep", nullable = false )
     private String cep;
+    @Column(name = "cliente_house_number", nullable = false )
     private int houseNumber;
+    @Column(name = "cliente_house_letter", nullable = false )
     private char houseLetter;
+    @Column(name = "cliente_sex", nullable = false )
     private SexEnum sex;
+    @Column(name = "cliente_photo", nullable = false )
     private String photo;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "login_id", referencedColumnName = "id")
     private LoginModel login;
+
+
+
+
+
+
+    public ClienteModel() {
+    }
 
     public ClienteModel(String name, String cpf, int age, String email, String telephone, String cep, int houseNumber, char houseLetter, SexEnum sex, String photo, LoginModel login) {
         this.name = name;
@@ -76,5 +101,49 @@ public class ClienteModel {
 
     public LoginModel getLogin() {
         return login;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public void setHouseNumber(int houseNumber) {
+        this.houseNumber = houseNumber;
+    }
+
+    public void setHouseLetter(char houseLetter) {
+        this.houseLetter = houseLetter;
+    }
+
+    public void setSex(SexEnum sex) {
+        this.sex = sex;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public void setLogin(LoginModel login) {
+        this.login = login;
     }
 }

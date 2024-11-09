@@ -15,14 +15,14 @@ header{
     z-index: 1;
     
 }
-header .header{
+header .header h1{
     font-family: "PT Serif", serif;
     font-weight: 700;
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 2.5rem;
 }
 nav{
-    font-size: 18px;
+    font-size: 26px;
 }
 nav ul{
     display: flex;
@@ -36,9 +36,18 @@ nav li{
 nav a{
     color: white;
     text-decoration: none;
-
+    
+}
+.header h3{
+    color: white;
+    font-size: 8rem;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 .home{
+    border-top: 1px solid black;
+
     background-image: url(./../img/home.jpg);
     background-size:cover;
     background-position: center;
@@ -49,12 +58,16 @@ nav a{
     justify-content: center;
     padding: 0 100px 0 100px;
 }
-.home .header{
+.home .header h2{
     color: white;
     font-size: 5rem;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    
 }
 .home .body{
-    color: white;
+    color:  white;
     font-family: Arial, Helvetica, sans-serif;
     font-size:1rem;
     max-width: 50%;
@@ -72,6 +85,8 @@ nav a{
 }
 
 .sobre{
+    border-top: 1px solid black;
+
     width: 100vw;
     height: 100vh ;
     display: flex;
@@ -81,13 +96,73 @@ nav a{
     flex-direction: column;
     
 }
-.sobre .header{
-    color: white;
-    font-size: 10rem;
-}
 .sobre .body{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:1rem;
+    font-size:1.4rem;
+    max-width: 90%;
+}
+
+.contato{
+    border-top: 1px solid black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding: 0 45px 0 45px;
+    justify-content: space-around;
+    align-items: center;
+}
+.contato .header{
+    width: 40%;
+    color: white;
+    margin: 0 0 55px 0;
+}
+.contato .header h3{
+    font-size: 6rem;
+}
+.contato .body{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.contato .body form button{
+    width: 100%;
+}
+footer{
+    padding: 15px 25px 15px 25px;
+width: 100vw;
+color: white;
+display: flex;
+justify-content: space-between;
+border-top: 1px solid black;
+}
+footer .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 12px;
+}
+footer .header .container{
     max-width: 50%;
+}
+footer img{
+    width: 240px;
+    height: 200px;
+}
+footer .body {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+}
+footer .body .icon{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+footer .body img{
+    width: 56px;
+    height: 46px;
 }

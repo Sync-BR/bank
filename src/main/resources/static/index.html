@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <title>Bank</title>
 </head>
 
@@ -22,32 +25,107 @@
             <ul>
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="home" id="home">
             <div class="header">
-                <h2>Abra sua conta</h2>
+                <h2>OFF Bank</h2>
             </div>
             <div class="body">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, quidem? Blanditiis officiis, odio rem fugit distinctio autem velit dolorum provident recusandae expedita laborum vitae iure est repudiandae nesciunt perspiciatis temporibus?</p>
+                <p>OFF Bank é uma instituição financeira digital criada para oferecer serviços bancários modernos, seguros e acessíveis, sempre com foco em você. Sabemos que o mundo digital pede praticidade e confiabilidade, e nosso compromisso é proporcionar uma experiência de banco virtual descomplicada, acessível e intuitiva.
+                </p>
                 <button>Baixar aplicativo</button>
             </div>
         </section>
         <section class="sobre" id="sobre">
             <div class="header">
-                <h3>Sobre</h3>
+                <h3>Serviços</h3>
             </div>
             <div class="body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corrupti sapiente quam dolor sint, possimus voluptate, delectus nihil odio, ea consequatur mollitia perferendis quisquam eveniet incidunt modi vitae molestiae excepturi.</p>
-                <br>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa delectus similique provident in corrupti, modi explicabo iure incidunt deleniti?</p>
+                <ul>
+                    <li><strong>Conta Digital Gratuita</strong>
+                        Abra sua conta em minutos, sem necessidade de agências físicas. Tenha acesso ao seu saldo, histórico de transações e funcionalidades de pagamento direto no app.
+                    </li>
+                    <li><strong>Cartão Off Bank</strong>
+                        Um cartão sem anuidade que oferece benefícios exclusivos, cashback e facilidade para realizar compras físicas e online, com total segurança.
+
+                    </li>
+                    <li><strong>Empréstimos Personalizados</strong>
+                        Precisando de um impulso financeiro? Oferecemos empréstimos rápidos e personalizados com taxas justas e condições flexíveis.
+                    </li>
+                    <li><strong>Investimentos</strong>
+                        Expanda seu patrimônio com nossos produtos de investimento, feitos para ajudar você a alcançar seus objetivos financeiros de curto e longo prazo.
+                    </li>
+                    <li><strong>Gestão Financeira Inteligente</strong>
+                        Ferramentas de gestão integradas ajudam você a acompanhar gastos, categorizar despesas e economizar de forma simples e inteligente.
+                    </li>
+                </ul>
             </div>
         </section>
-    </main>
+        <section class="contato" id="contato">
+            <div class="header">
+                <h3>Entre em Contato</h3>
+                <p>Estamos prontos para ajudar! No Off Bank, o suporte ao cliente é uma prioridade, e nossa equipe está disponível para responder às suas perguntas, ouvir sugestões e fornecer o suporte que você precisa.
+                </p>
+            </div>
+            <div class="body">
+                <form action="" method="post">
 
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-light">Enviar</button>
+
+                </form>
+
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="header">
+            <img src="./src/img/logo.png" alt="Logo">
+            <div class="container">
+
+                <p>Estamos prontos para ajudar! No Off Bank, o suporte ao cliente é uma prioridade, e nossa equipe está
+                    disponível para responder às suas perguntas, ouvir sugestões e fornecer o suporte que você precisa.
+                </p>
+                <p><strong>Central de Atendimento ao Cliente</strong>
+                    <br>
+                    📞 0800 123 4567
+                    Ligue para nossa central para resolver questões sobre sua conta, cartões e transações. Atendimento
+                    disponível 24 horas por dia, 7 dias por semana.
+
+                </p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="container">
+                <strong>Endereço para Correspondência</strong> <br>
+                Off Bank S/A <br>
+                Av. Inovação, 1234 - Centro, São Paulo, SP, 01010-000
+            </div>
+            <div class="icon">
+
+                <img src="./src/img/facebook.png" alt="facebook">
+                <img src="./src/img/instagram.png" alt="instagram">
+                <img src="./src/img/whatsapp_733585.png" alt="whatsapp">
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -8,10 +8,19 @@ public class LoginModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "cliente_username", nullable = false )
+    @Column(name = "username", nullable = false )
     private String username;
-    @Column(name = "cliente_password", nullable = false )
+    @Column(name = "password", nullable = false )
     private String password;
+
+    @Override
+    public String toString() {
+        return "LoginModel{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 
     public LoginModel() {
     }

@@ -1,7 +1,7 @@
 package com.bank.banco.virtual.enums;
 
 public enum SexEnum {
-    masculine("Masculino"),
+        masculine("Masculino"),
     feminine("Feminino");
     private String gender;
     private int value;

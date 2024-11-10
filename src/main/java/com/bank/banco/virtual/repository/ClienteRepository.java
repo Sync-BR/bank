@@ -2,8 +2,10 @@ package com.bank.banco.virtual.repository;
 
 import com.bank.banco.virtual.model.ClienteModel;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ClienteRepository extends JpaRepository<ClienteModel, Long> {
-    public ClienteModel findByCpf(String cpf);
-    public ClienteModel findByEmail(String email);
+     ClienteModel findByCpf(String cpf);
+     ClienteModel findByEmail(String email);
 }

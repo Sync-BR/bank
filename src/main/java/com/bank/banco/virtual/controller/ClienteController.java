@@ -31,16 +31,12 @@ public class ClienteController {
     @PostMapping("/creater")
     public ResponseEntity<?> registerUser(@RequestBody ClienteModel cliente) {
         if (service.createrUser(cliente)) {
-            log.info("Cliente cadastrado com sucesso");
             return ResponseEntity.status(HttpStatus.CREATED).body("Cliente cadastrado com sucesso");
         }
-//        }
-        log.error("Erro ao cadastrar cliente");
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Erro ao cadastrar cliente");
 
     }
 
-    // Se existe o cpf retorna verdadeiro
     @PostMapping("/check/cpf/{cpf}")
     public ResponseEntity<?> checkCpf(@PathVariable String cpf) {
         if (service.checkCpf(cpf)) {
@@ -49,7 +45,6 @@ public class ClienteController {
         return ResponseEntity.status(HttpStatus.OK).body(false);
     }
 
-    // Se existe o email retorna verdadeiro
     @PostMapping("/check/email/{email}")
     public ResponseEntity<?> checkEmail(@PathVariable String email) {
         if (service.checkEmail(email)) {

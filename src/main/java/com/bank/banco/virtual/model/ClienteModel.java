@@ -25,6 +25,10 @@ public class ClienteModel {
     private int houseNumber;
     @Column(name = "cliente_house_letter", nullable = false )
     private char houseLetter;
+    //Verificar como enviar as informações em formato string
+    //Exemplo, masculino ao invez de 0 ou 1
+//    @Transient
+    @Enumerated(EnumType.STRING)
     @Column(name = "cliente_sex", nullable = false )
     private SexEnum sex;
     @Column(name = "cliente_photo", nullable = false )
@@ -33,10 +37,23 @@ public class ClienteModel {
     @JoinColumn(name = "login_id", referencedColumnName = "id")
     private LoginModel login;
 
-
-
-
-
+    @Override
+    public String toString() {
+        return "ClienteModel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", cep='" + cep + '\'' +
+                ", houseNumber=" + houseNumber +
+                ", houseLetter=" + houseLetter +
+                ", sex=" + sex +
+                ", photo='" + photo + '\'' +
+                ", login=" + login +
+                '}';
+    }
 
     public ClienteModel() {
     }

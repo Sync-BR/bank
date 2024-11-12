@@ -1,10 +1,9 @@
 package com.bank.banco.virtual.controller;
 
 import com.bank.banco.virtual.model.ClienteModel;
-import com.bank.banco.virtual.repository.ClienteRepository;
 import com.bank.banco.virtual.service.ClienteService;
 
-import com.bank.banco.virtual.service.FileUploadService;
+import com.bank.banco.virtual.service.uploadService.FileUploadService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.bank.banco.virtual.service;
+package com.bank.banco.virtual.service.uploadService;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

@@ -27,8 +27,8 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/login/controlador/login", "/api/login/controlador/teste").permitAll()  // Permite o endpoint de login sem autenticação
-                        .anyRequest().authenticated()            // Requer autenticação para as demais rotas
+//                        .requestMatchers("/api/login/controlador/login", "*").permitAll()  // Permite o endpoint de login sem autenticação
+                        .anyRequest().permitAll()      // Requer autenticação para as demais rotas
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)); // Configura o modo de sessão para APIs
 

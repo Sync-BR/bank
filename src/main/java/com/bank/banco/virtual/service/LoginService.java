@@ -12,11 +12,11 @@ public class LoginService {
     private static final Logger log = LogManager.getLogger(LoginService.class);
     @Autowired
     private LoginRepository loginRepository;
+
     protected boolean findByLogin(LoginModel login) {
-        System.out.println("dados " + login);
         LoginModel loginModel = loginRepository.findByUsername(login.getUsername());
-        if(loginModel != null) {
-            if(login.getPassword().equals(loginModel.getPassword())) {
+        if (loginModel != null) {
+            if (login.getPassword().equals(loginModel.getPassword())) {
                 log.info("Usuário autenticado com sucesso!");
                 return true;
             }
@@ -24,6 +24,16 @@ public class LoginService {
             return false;
         }
         log.info("Usuário não encontrado!");
+        return false;
+    }
+
+    protected boolean findByUserName(String username) {
+        System.out.println(username.toString());
+        LoginModel usernameDate = loginRepository.findByUsername(username);
+        log.info("Resposta: " +usernameDate);
+        if (usernameDate != null) {
+            return true;
+        }
         return false;
     }
 }

@@ -20,7 +20,6 @@ public class LoginController extends LoginService {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginModel loginModel) {
-        System.out.println("teste");
         LoginModel userLogin = new LoginModel(loginModel.getUsername(), loginModel.getPassword());
         if (findByLogin(userLogin)) {
             String token = jwtUtil.generateToken(userLogin.getUsername());
@@ -30,4 +29,12 @@ public class LoginController extends LoginService {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Falha ao autenticar usuário");
     }
 
+    @PostMapping("/check/checkusername/{username}")
+    public ResponseEntity<Boolean> checkUserName(@PathVariable String username) {
+        System.out.println(username);
+        if (findByUserName(username)) {
+            return ResponseEntity.status(HttpStatus.OK).body(true);
+        }
+        return new ResponseEntity<>(false, HttpStatus.OK);
+    }
 }

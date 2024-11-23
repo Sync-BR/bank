@@ -28,11 +28,11 @@ public class ClienteController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Falha no upload da imagem.");
     }
     @PostMapping("/creater")
-    public ResponseEntity<?> registerUser(@RequestBody ClienteModel cliente) {
+    public ResponseEntity<HttpStatus> registerUser(@RequestBody ClienteModel cliente) {
         if (service.createrUser(cliente)) {
-            return ResponseEntity.status(HttpStatus.CREATED).body("Cliente cadastrado com sucesso");
+            return new ResponseEntity<>(HttpStatus.CREATED);
         }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Erro ao cadastrar cliente");
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
     }
 

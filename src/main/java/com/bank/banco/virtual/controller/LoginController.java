@@ -29,7 +29,7 @@ public class LoginController extends LoginService {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Falha ao autenticar usuário");
     }
 
-    @PostMapping("/check/checkusername/{username}")
+    @GetMapping("/check/checkusername/{username}")
     public ResponseEntity<Boolean> checkUserName(@PathVariable String username) {
         System.out.println(username);
         if (findByUserName(username)) {

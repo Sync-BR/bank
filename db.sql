@@ -22,3 +22,12 @@ CREATE TABLE cliente (
                          login_id INT,
                          CONSTRAINT fk_login_id FOREIGN KEY (login_id) REFERENCES login(id) ON DELETE CASCADE
 );
+
+
+CREATE TABLE IF NOT EXISTS coins (
+                                     id INT AUTO_INCREMENT PRIMARY KEY,
+                                     client_money DOUBLE NOT NULL,
+                                     client_card_limit DOUBLE
+);
+ALTER TABLE cliente ADD coins_id INT;
+ALTER TABLE cliente ADD CONSTRAINT fk_coins_id FOREIGN KEY (coins_id) REFERENCES coins(id) ON DELETE CASCADE;

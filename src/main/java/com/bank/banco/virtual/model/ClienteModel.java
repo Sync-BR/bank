@@ -25,9 +25,6 @@ public class ClienteModel {
     private int houseNumber;
     @Column(name = "cliente_house_letter", nullable = false )
     private char houseLetter;
-    //Verificar como enviar as informações em formato string
-    //Exemplo, masculino ao invez de 0 ou 1
-//    @Transient
     @Enumerated(EnumType.STRING)
     @Column(name = "cliente_sex", nullable = false )
     private SexEnum sex;
@@ -36,7 +33,9 @@ public class ClienteModel {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "login_id", referencedColumnName = "id")
     private LoginModel login;
-
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "coins_id", referencedColumnName = "id")
+    private CoinsModel coins;
     @Override
     public String toString() {
         return "ClienteModel{" +
@@ -70,6 +69,21 @@ public class ClienteModel {
         this.sex = sex;
         this.photo = photo;
         this.login = login;
+    }
+
+    public ClienteModel(String name, String cpf, int age, String email, String telephone, String cep, int houseNumber, char houseLetter, SexEnum sex, String photo, LoginModel login, CoinsModel coins) {
+        this.name = name;
+        this.cpf = cpf;
+        this.age = age;
+        this.email = email;
+        this.telephone = telephone;
+        this.cep = cep;
+        this.houseNumber = houseNumber;
+        this.houseLetter = houseLetter;
+        this.sex = sex;
+        this.photo = photo;
+        this.login = login;
+        this.coins = coins;
     }
 
     public int getId() {
@@ -118,6 +132,10 @@ public class ClienteModel {
 
     public LoginModel getLogin() {
         return login;
+    }
+
+    public CoinsModel getCoins() {
+        return coins;
     }
 
     public void setName(String name) {
